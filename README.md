@@ -8,6 +8,7 @@ Financial dashboard UI inspired by the Garna soft-UI concept: lime accent, bento
 - `payouts.html` — contractor payouts (balance, deferred team payouts, templates, history)
 - `company.html` — contractors & positions directory
 - `perks.html` — perks and benefits (partner offers, 4-column cards)
+- `notifications.html` — notifications inbox
 
 ## Run
 

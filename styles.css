@@ -144,6 +144,7 @@ p {
   box-shadow: var(--shadow);
   position: relative;
   transition: transform 0.2s ease, background 0.2s ease;
+  text-decoration: none;
 }
 
 .icon-btn:hover,
@@ -312,8 +313,7 @@ p {
 
 .card-head h2,
 .chart-title-row h2,
-.section-head h3,
-.quick-action h3 {
+.section-head h3 {
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -603,12 +603,7 @@ a.btn {
   font-weight: 700;
 }
 
-/* Right panel */
-.right-panel {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+/* Shared section headers / avatar rows */
 
 .section-head {
   display: flex;
@@ -664,92 +659,6 @@ a.btn {
   place-items: center;
 }
 
-.credit-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 24px;
-  padding: 22px 22px 18px;
-  min-height: 190px;
-  color: #fff;
-  background:
-    linear-gradient(135deg, rgba(20, 28, 18, 0.72), rgba(10, 16, 12, 0.85)),
-    radial-gradient(circle at 20% 30%, rgba(140, 220, 80, 0.35), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(40, 90, 50, 0.55), transparent 45%),
-    linear-gradient(160deg, #1a2a1c, #0b120e 60%, #152218);
-  box-shadow: 0 18px 40px rgba(12, 20, 12, 0.28);
-}
-
-.credit-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    url("data:image/svg+xml,%3Csvg width='160' height='160' viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='1.2' fill='rgba(255,255,255,0.08)'/%3E%3C/svg%3E");
-  opacity: 0.7;
-  pointer-events: none;
-}
-
-.cc-top,
-.cc-bottom,
-.cc-number {
-  position: relative;
-  z-index: 1;
-}
-
-.cc-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 28px;
-}
-
-.visa {
-  font-weight: 800;
-  font-style: italic;
-  letter-spacing: 0.08em;
-  font-size: 1.25rem;
-}
-
-.cc-chip {
-  width: 36px;
-  height: 26px;
-  border-radius: 6px;
-  background:
-    linear-gradient(135deg, #f0d78c, #c9a24a 45%, #e8c86a);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-}
-
-.cc-number {
-  font-size: 1.15rem;
-  letter-spacing: 0.12em;
-  font-weight: 500;
-  margin-bottom: 22px;
-}
-
-.cc-bottom {
-  display: grid;
-  grid-template-columns: 1.4fr 0.8fr 0.5fr;
-  gap: 8px;
-}
-
-.cc-label {
-  display: block;
-  font-size: 0.65rem;
-  color: rgba(255, 255, 255, 0.55);
-  margin-bottom: 4px;
-}
-
-.cc-value {
-  font-size: 0.82rem;
-  font-weight: 600;
-}
-
-.action-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -795,102 +704,6 @@ a.btn {
   border: 1.5px solid #e2e5df;
 }
 
-.qa-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-top: 12px;
-}
-
-.qa-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 16px 8px;
-  border-radius: 20px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #3d424a;
-  transition: transform 0.2s ease;
-}
-
-.qa-btn:hover {
-  transform: translateY(-2px);
-}
-
-.qa-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 14px;
-  background: #f4f6f1;
-  display: grid;
-  place-items: center;
-  color: #2f343c;
-}
-
-.qa-icon svg {
-  width: 18px;
-  height: 18px;
-}
-
-.plan-card {
-  margin-top: auto;
-  background:
-    linear-gradient(180deg, #ffffff 0%, #f8fbf2 100%);
-}
-
-.plan-badge {
-  display: inline-flex;
-  padding: 6px 12px;
-  border-radius: var(--radius-pill);
-  background: var(--lime-soft);
-  color: #3d5a10;
-  font-size: 0.78rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.plan-card p {
-  color: #5f646c;
-  font-size: 0.92rem;
-  line-height: 1.45;
-  margin-bottom: 16px;
-}
-
-.dash-side-row {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr 0.85fr;
-  gap: 14px;
-  align-items: stretch;
-}
-
-.dash-side-row .quick-send,
-.dash-side-row .quick-action,
-.dash-side-row .card-visual {
-  background: var(--surface);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow);
-  padding: 18px;
-}
-
-.dash-side-row .card-visual {
-  padding: 0;
-  background: transparent;
-  box-shadow: none;
-}
-
-.dash-side-row .action-row {
-  margin-top: 12px;
-}
-
-.dash-side-row .plan-card {
-  margin-top: 0;
-}
-
 /* Motion */
 @keyframes rise-in {
   from {
@@ -905,10 +718,7 @@ a.btn {
 
 .wallet-card,
 .stat-card,
-.chart-card,
-.credit-card,
-.plan-card,
-.qa-btn {
+.chart-card {
   animation: rise-in 0.55s ease both;
 }
 
@@ -916,8 +726,6 @@ a.btn {
 .stat-card:nth-child(3) { animation-delay: 0.1s; }
 .stat-card:nth-child(4) { animation-delay: 0.15s; }
 .chart-card { animation-delay: 0.18s; }
-.credit-card { animation-delay: 0.12s; }
-.plan-card { animation-delay: 0.22s; }
 
 /* Responsive */
 @media (max-width: 900px) {
@@ -929,8 +737,9 @@ a.btn {
   .main-nav {
     grid-column: 1 / -1;
     order: 3;
-    overflow-x: auto;
+    overflow-x: visible;
     width: 100%;
+    flex-wrap: wrap;
   }
 
   .layout {
@@ -938,7 +747,7 @@ a.btn {
   }
 
   .sidebar {
-    flex-direction: row;
+    flex-direction: column;
     min-height: auto;
     position: static;
     gap: 10px;
@@ -947,13 +756,26 @@ a.btn {
   .sidebar-pill {
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 6px;
     border-radius: var(--radius-pill);
     padding: 8px 12px;
   }
 
   .sidebar-pill--bottom {
-    display: none;
+    display: flex;
+    margin-top: 0;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  .nav-item {
+    padding: 9px 14px;
+    font-size: 0.86rem;
   }
 
   .main-grid {
@@ -971,10 +793,6 @@ a.btn {
 
   .chart-head {
     flex-direction: column;
-  }
-
-  .dash-side-row {
-    grid-template-columns: 1fr;
   }
 }
 
