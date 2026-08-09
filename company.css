@@ -1,0 +1,223 @@
+/* Company — bento layout */
+
+.company-grid {
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+
+.company-top {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.company-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.invite-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 0;
+  height: 100%;
+  padding: 18px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease;
+}
+
+.invite-card:hover {
+  transform: translateY(-3px);
+}
+
+.invite-card--dark {
+  background:
+    radial-gradient(circle at 90% 10%, rgba(184, 255, 60, 0.22), transparent 40%),
+    linear-gradient(145deg, #171717 0%, #222820 100%);
+  color: #fff;
+}
+
+.invite-card h2 {
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+  margin: 0 0 6px;
+}
+
+.invite-card p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.invite-card--dark p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.invite-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.invite-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.invite-icon--mail {
+  background: var(--lime);
+  color: #151515;
+}
+
+.invite-icon--csv {
+  background: #dff7a8;
+  color: #2a321c;
+}
+
+.company-row .stat-card {
+  height: 100%;
+  min-height: 132px;
+  padding: 18px 18px 16px;
+  box-sizing: border-box;
+}
+
+.directory-card {
+  grid-column: 1 / -1;
+  padding: 18px;
+}
+
+.directory-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.directory-search {
+  flex: 1;
+  min-width: 220px;
+  max-width: 420px;
+}
+
+.list-tabs .seg-btn.is-active {
+  background: var(--ink);
+  color: #fff;
+}
+
+.contractor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.contractor-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+  border-radius: 18px;
+  background: #f7f8f5;
+  text-align: left;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contractor-card:hover {
+  background: #f0f2ec;
+  transform: translateY(-1px);
+}
+
+.contractor-card.is-selected {
+  background: var(--surface);
+  box-shadow: 0 0 0 2px var(--lime), var(--shadow);
+}
+
+.contractor-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #eef6d8;
+  color: #3d5a10;
+  font-size: 0.78rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.contractor-avatar.av-a { background: #e8f0ff; color: #1f4db8; }
+.contractor-avatar.av-b { background: #efe8ff; color: #6b4bc4; }
+.contractor-avatar.av-c { background: #ffe8e8; color: #c44b4b; }
+.contractor-avatar.av-d { background: #e8fff4; color: #1f8a5a; }
+
+.contractor-body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contractor-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.contractor-name-row strong {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.contractor-meta {
+  color: var(--muted);
+  font-size: 0.78rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.role-pill {
+  display: inline-flex;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  background: #efe8ff;
+  color: #6b4bc4;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.role-pill--pending {
+  background: rgba(239, 91, 91, 0.12);
+  color: var(--down);
+}
+
+@media (max-width: 900px) {
+  .company-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .company-row .invite-card {
+    grid-column: 1 / -1;
+  }
+
+  .company-row .stat-card {
+    width: 100%;
+    height: auto;
+    min-height: 132px;
+  }
+
+  .contractor-grid {
+    grid-template-columns: 1fr;
+  }
+}

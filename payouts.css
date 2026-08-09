@@ -1,0 +1,550 @@
+/* Payouts uses dashboard layout: sidebar | main-grid */
+
+.page-header--payouts {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 5px;
+  background: #e9ebe6;
+  border-radius: var(--radius-pill);
+}
+
+.account-tab {
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  color: #5f646c;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.account-tab.is-active {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.payouts-grid .balance-card {
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.payouts-grid .card-head {
+  margin-bottom: 18px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.payouts-grid .card-head h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.currency-tag {
+  display: inline-flex;
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--lime-soft);
+  color: #3d5a10;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.currency-switch {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: #f3f5f0;
+  border-radius: var(--radius-pill);
+}
+
+.currency-btn {
+  min-width: 48px;
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  color: #5f646c;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.currency-btn.is-active {
+  background: var(--ink);
+  color: #fff;
+}
+
+.account-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 16px;
+  background: #f7f8f5;
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin: 14px 0 0;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.account-number code {
+  color: var(--ink);
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 0.84rem;
+}
+
+.copy-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #5f646c;
+}
+
+.copy-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.copy-btn:hover {
+  background: #eceee9;
+  color: var(--ink);
+}
+
+.balance-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.balance-actions .btn {
+  width: 100%;
+}
+
+#balanceAmount small {
+  font-size: 0.45em;
+}
+
+/* History card spans main grid */
+.history-card {
+  grid-column: 1 / -1;
+  padding-bottom: 14px;
+}
+
+.history-subtitle {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.history-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.history-tabs .seg-btn.is-active {
+  background: var(--ink);
+  color: #fff;
+}
+
+.icon-btn--sm {
+  width: 40px;
+  height: 40px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.history-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 14px;
+  background: #f7f8f5;
+  border-radius: 18px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.history-item:hover {
+  background: #f0f2ec;
+  transform: translateY(-1px);
+}
+
+.history-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-weight: 800;
+}
+
+.history-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.history-icon--refund {
+  background: #efe8ff;
+  color: #6b4bc4;
+}
+
+.history-icon--bank {
+  background: #eef6d8;
+  color: #3d5a10;
+}
+
+.history-icon--paypal {
+  background: #e8f0ff;
+  color: #1f4db8;
+}
+
+.history-icon--team {
+  background: var(--lime-soft);
+  color: #2a321c;
+}
+
+.history-meta {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.history-meta strong {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.history-meta > span:not(.status-pill) {
+  color: var(--muted);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.status-pill {
+  display: inline-flex;
+  width: fit-content;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.status-pill--canceled {
+  background: rgba(239, 91, 91, 0.12);
+  color: var(--down);
+}
+
+.status-pill--done {
+  background: rgba(47, 191, 107, 0.12);
+  color: var(--up);
+}
+
+.history-amount {
+  text-align: right;
+}
+
+.history-amount strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.history-amount time {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+/* Shared payout tools inside main grid */
+.feature-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+}
+
+.feature-banner--dark {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(184, 255, 60, 0.18), transparent 40%),
+    linear-gradient(135deg, #171717 0%, #222820 100%);
+  color: #fff;
+}
+
+.feature-banner-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.feature-banner-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.feature-banner-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.feature-banner-copy h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.feature-banner-copy p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.btn-dark {
+  background: #171717;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.btn-dark:hover {
+  background: #2a2a2a;
+}
+
+.payouts-banner,
+.payouts-tools,
+.payouts-offers {
+  grid-column: 1 / -1;
+}
+
+.payouts-tools {
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.payouts-tools .section-head {
+  margin-bottom: 12px;
+}
+
+.templates-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.payouts-offers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.template-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #f7f8f5;
+  border-radius: 18px;
+  text-align: left;
+  transition: transform 0.2s ease;
+  width: 100%;
+}
+
+.template-card:hover {
+  transform: translateY(-2px);
+}
+
+.template-card--new {
+  border: 1.5px dashed #c9cdc4;
+  background: #fafbf8;
+}
+
+.template-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-weight: 800;
+}
+
+.template-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.template-icon--new {
+  background: var(--lime);
+  color: #151515;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.template-icon--bank {
+  background: #eef6d8;
+  color: #3d5a10;
+}
+
+.template-icon--paypal {
+  background: #e8f0ff;
+  color: #1f4db8;
+  font-size: 1rem;
+}
+
+.template-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.template-text strong {
+  font-size: 0.88rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.template-text small {
+  color: var(--muted);
+  font-size: 0.76rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-offer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+}
+
+.mini-offer--lime {
+  background: linear-gradient(135deg, #c8ff5a 0%, #a8ef2e 55%, #95df22 100%);
+  color: #151515;
+}
+
+.mini-offer h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.mini-offer p {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.auto-card--compact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 16px;
+}
+
+.auto-card-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.auto-card h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.auto-card p {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.auto-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #d8f5a2, #b8ff3c);
+  color: #1a1a1a;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.auto-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 1100px) {
+  .templates-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .payouts-offers {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .payouts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .history-card {
+    grid-column: 1;
+  }
+
+  .history-card .chart-head {
+    flex-direction: column;
+  }
+
+  .account-number {
+    flex-wrap: wrap;
+  }
+
+  .balance-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .feature-banner {
+    flex-wrap: wrap;
+  }
+
+  .templates-row {
+    grid-template-columns: 1fr;
+  }
+}
+

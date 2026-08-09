@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garna — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Top Navigation -->
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M16 4c2.8 4.2 6.4 6.2 10.8 7.2-4.4 1-8 3-10.8 7.2C13.2 14.2 9.6 12.2 5.2 11.2 9.6 10.2 13.2 8.2 16 4z" fill="#B8FF3C"/>
+            <path d="M16 12.5c1.8 2.7 4.1 4 7 4.6-2.9.6-5.2 1.9-7 4.6-1.8-2.7-4.1-4-7-4.6 2.9-.6 5.2-1.9 7-4.6z" fill="#9AE62A"/>
+          </svg>
+        </span>
+        <span class="brand-name">Garna</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a class="nav-item is-active" href="index.html">Dashboard</a>
+        <a class="nav-item" href="payouts.html">Payouts</a>
+        <a class="nav-item" href="company.html">Company</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <button class="icon-btn" type="button" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 9a6 6 0 1 1 12 0c0 3.2.8 4.6 1.6 5.6.3.4 0 1.4-.8 1.4H5.2c-.8 0-1.1-1-.8-1.4C5.2 13.6 6 12.2 6 9z"/>
+            <path d="M10 19a2 2 0 0 0 4 0"/>
+          </svg>
+          <span class="badge-dot"></span>
+        </button>
+        <button class="icon-btn" type="button" aria-label="Settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4l1.4-1.4M17 7l1.4-1.4"/>
+          </svg>
+        </button>
+        <button class="avatar-btn" type="button" aria-label="Profile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="9" r="3.2"/>
+            <path d="M5.5 19c1.4-3 3.7-4.5 6.5-4.5s5.1 1.5 6.5 4.5"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- Left Sidebar -->
+      <aside class="sidebar" aria-label="Sidebar">
+        <div class="sidebar-pill">
+          <a class="side-btn is-active" href="index.html" aria-label="Dashboard" title="Dashboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3.5" y="3.5" width="7" height="7" rx="2"/>
+              <rect x="13.5" y="3.5" width="7" height="7" rx="2"/>
+              <rect x="3.5" y="13.5" width="7" height="7" rx="2"/>
+              <rect x="13.5" y="13.5" width="7" height="7" rx="2"/>
+            </svg>
+          </a>
+          <a class="side-btn" href="payouts.html" aria-label="Payouts" title="Payouts">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 3v12M8 11l4 4 4-4"/>
+              <path d="M4 19h16"/>
+            </svg>
+          </a>
+          <a class="side-btn" href="company.html" aria-label="Company" title="Company">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M4 20V8l8-4 8 4v12"/>
+              <path d="M9 20v-6h6v6"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="sidebar-pill sidebar-pill--bottom">
+          <button class="side-btn" type="button" aria-label="Settings" title="Settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4l1.4-1.4M17 7l1.4-1.4"/>
+            </svg>
+          </button>
+          <button class="side-btn" type="button" aria-label="Help" title="Help">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M9.5 9.5a2.5 2.5 0 1 1 3.8 2.1c-.8.5-1.3 1-1.3 2"/>
+              <circle cx="12" cy="16.5" r=".8" fill="currentColor"/>
+            </svg>
+          </button>
+          <button class="side-btn" type="button" aria-label="Logout" title="Logout">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M10 5H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3"/>
+              <path d="M14 12H6M15 8l4 4-4 4"/>
+            </svg>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main">
+        <div class="page-header">
+          <div>
+            <h1>Good morning, Oripio</h1>
+          </div>
+          <label class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="11" cy="11" r="6.5"/>
+              <path d="M16 16l4.5 4.5"/>
+            </svg>
+            <input type="search" placeholder="Search product" />
+          </label>
+        </div>
+
+        <div class="main-grid">
+          <!-- Smart Wallet -->
+          <section class="card wallet-card">
+            <div class="card-head">
+              <h2>Smart Wallet</h2>
+              <a class="btn btn-lime btn-sm" href="company.html">Add New +</a>
+            </div>
+            <div class="wallet-balance">
+              <span class="wallet-amount">19,820.00 <small>USD</small></span>
+              <span class="wallet-label">Total Saving</span>
+            </div>
+            <div class="wallet-cats">
+              <button class="cat-chip" type="button">
+                <span class="cat-icon cat-icon--travel">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+                </span>
+                Travel
+              </button>
+              <button class="cat-chip" type="button">
+                <span class="cat-icon cat-icon--property">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 3 10v11h6v-6h6v6h6V10L12 3z"/></svg>
+                </span>
+                Property
+              </button>
+              <button class="cat-chip" type="button">
+                <span class="cat-icon cat-icon--education">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 13.5L4.5 12.3v3.4L12 20l7.5-4.3v-3.4L12 16.5z"/></svg>
+                </span>
+                Education
+              </button>
+            </div>
+          </section>
+
+          <!-- Stats -->
+          <section class="stats-grid">
+            <article class="card stat-card">
+              <div class="stat-top">
+                <span>Current Balance</span>
+                <span class="trend trend-up">+34.5%</span>
+              </div>
+              <strong>$7,000.75</strong>
+            </article>
+            <article class="card stat-card">
+              <div class="stat-top">
+                <span>Savings</span>
+                <span class="trend trend-up">+12.01%</span>
+              </div>
+              <strong>$5,300.50</strong>
+            </article>
+            <article class="card stat-card">
+              <div class="stat-top">
+                <span>Income</span>
+                <span class="trend trend-up">+7.76%</span>
+              </div>
+              <strong>$28,750.75</strong>
+            </article>
+            <article class="card stat-card">
+              <div class="stat-top">
+                <span>Expenses</span>
+                <span class="trend trend-down">-8.12%</span>
+              </div>
+              <strong>$21,450.00</strong>
+            </article>
+          </section>
+
+          <!-- Cash Flow -->
+          <section class="card chart-card">
+            <div class="chart-head">
+              <div>
+                <div class="chart-title-row">
+                  <h2>Cash Flow</h2>
+                  <button class="select-btn" type="button">
+                    Yearly
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                </div>
+                <p class="chart-total">$342,323.44</p>
+              </div>
+              <div class="segmented" role="tablist">
+                <button class="seg-btn is-active" type="button" data-tab="income">Income</button>
+                <button class="seg-btn" type="button" data-tab="expense">Expanse</button>
+                <button class="seg-btn" type="button" data-tab="savings">Savings</button>
+              </div>
+            </div>
+            <div class="chart-wrap">
+              <div class="chart-tooltip" id="chartTooltip">$8,689.20</div>
+              <canvas id="cashFlowChart" height="220"></canvas>
+            </div>
+            <div class="chart-labels" id="chartLabels"></div>
+          </section>
+
+          <div class="dash-side-row">
+            <section class="card-visual">
+              <div class="credit-card">
+                <div class="cc-top">
+                  <span class="visa">VISA</span>
+                  <span class="cc-chip" aria-hidden="true"></span>
+                </div>
+                <p class="cc-number">**** **** 3892 7835</p>
+                <div class="cc-bottom">
+                  <div>
+                    <span class="cc-label">Card Holder Name</span>
+                    <span class="cc-value">Robart Esperanza</span>
+                  </div>
+                  <div>
+                    <span class="cc-label">Expiry Date</span>
+                    <span class="cc-value">18/90</span>
+                  </div>
+                  <div>
+                    <span class="cc-label">CVV</span>
+                    <span class="cc-value">235</span>
+                  </div>
+                </div>
+              </div>
+              <div class="action-row">
+                <button class="btn btn-lime btn-lg" type="button">Deposit</button>
+                <button class="btn btn-ghost btn-lg" type="button">Transfer</button>
+              </div>
+            </section>
+
+            <section class="quick-send">
+              <div class="section-head">
+                <h3>Quick Send</h3>
+                <a class="link-btn" href="company.html">View All</a>
+              </div>
+              <div class="avatars">
+                <button class="person" type="button">
+                  <img src="https://i.pravatar.cc/80?img=32" alt="Anna" />
+                </button>
+                <button class="person" type="button">
+                  <img src="https://i.pravatar.cc/80?img=12" alt="Marcus" />
+                </button>
+                <button class="person" type="button">
+                  <img src="https://i.pravatar.cc/80?img=47" alt="Sofia" />
+                </button>
+                <button class="person" type="button">
+                  <img src="https://i.pravatar.cc/80?img=15" alt="Leo" />
+                </button>
+                <button class="person add-person" type="button" aria-label="Add contact">+</button>
+              </div>
+              <section class="quick-action" style="margin-top:18px">
+                <h3>Quick Action</h3>
+                <div class="qa-grid">
+                  <button class="qa-btn" type="button">
+                    <span class="qa-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4v12M7 11l5 5 5-5M5 20h14"/></svg>
+                    </span>
+                    Received
+                  </button>
+                  <button class="qa-btn" type="button">
+                    <span class="qa-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20V8M7 13l5-5 5 5M5 4h14"/></svg>
+                    </span>
+                    Request
+                  </button>
+                  <button class="qa-btn" type="button">
+                    <span class="qa-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="12" r="1.4" fill="currentColor"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="18" cy="12" r="1.4" fill="currentColor"/></svg>
+                    </span>
+                    More
+                  </button>
+                </div>
+              </section>
+            </section>
+
+            <section class="card plan-card">
+              <div class="plan-badge">Starter Plan</div>
+              <p>Upgrade to the enterprise plan &amp; get attractive discounts</p>
+              <a class="btn btn-lime btn-block" href="payouts.html">Go to Payouts</a>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
