@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garna — Perks and Benefits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="perks.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M16 4c2.8 4.2 6.4 6.2 10.8 7.2-4.4 1-8 3-10.8 7.2C13.2 14.2 9.6 12.2 5.2 11.2 9.6 10.2 13.2 8.2 16 4z" fill="#B8FF3C"/>
+            <path d="M16 12.5c1.8 2.7 4.1 4 7 4.6-2.9.6-5.2 1.9-7 4.6-1.8-2.7-4.1-4-7-4.6 2.9-.6 5.2-1.9 7-4.6z" fill="#9AE62A"/>
+          </svg>
+        </span>
+        <span class="brand-name">Garna</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a class="nav-item" href="index.html">Dashboard</a>
+        <a class="nav-item" href="payouts.html">Payouts</a>
+        <a class="nav-item" href="company.html">Company</a>
+        <a class="nav-item is-active" href="perks.html">Perks</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <button class="icon-btn" type="button" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 9a6 6 0 1 1 12 0c0 3.2.8 4.6 1.6 5.6.3.4 0 1.4-.8 1.4H5.2c-.8 0-1.1-1-.8-1.4C5.2 13.6 6 12.2 6 9z"/>
+            <path d="M10 19a2 2 0 0 0 4 0"/>
+          </svg>
+          <span class="badge-dot"></span>
+        </button>
+        <button class="icon-btn" type="button" aria-label="Settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4l1.4-1.4M17 7l1.4-1.4"/>
+          </svg>
+        </button>
+        <button class="avatar-btn" type="button" aria-label="Profile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="9" r="3.2"/>
+            <path d="M5.5 19c1.4-3 3.7-4.5 6.5-4.5s5.1 1.5 6.5 4.5"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar" aria-label="Sidebar">
+        <div class="sidebar-pill">
+          <a class="side-btn" href="index.html" aria-label="Dashboard" title="Dashboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3.5" y="3.5" width="7" height="7" rx="2"/>
+              <rect x="13.5" y="3.5" width="7" height="7" rx="2"/>
+              <rect x="3.5" y="13.5" width="7" height="7" rx="2"/>
+              <rect x="13.5" y="13.5" width="7" height="7" rx="2"/>
+            </svg>
+          </a>
+          <a class="side-btn" href="payouts.html" aria-label="Payouts" title="Payouts">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 3v12M8 11l4 4 4-4"/>
+              <path d="M4 19h16"/>
+            </svg>
+          </a>
+          <a class="side-btn" href="company.html" aria-label="Company" title="Company">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M4 20V8l8-4 8 4v12"/>
+              <path d="M9 20v-6h6v6"/>
+            </svg>
+          </a>
+          <a class="side-btn is-active" href="perks.html" aria-label="Perks" title="Perks">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5L12 14.8 7.5 16.7l.9-5L4.8 8.2l5-.7L12 3z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="sidebar-pill sidebar-pill--bottom">
+          <button class="side-btn" type="button" aria-label="Settings" title="Settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4l1.4-1.4M17 7l1.4-1.4"/>
+            </svg>
+          </button>
+          <button class="side-btn" type="button" aria-label="Help" title="Help">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M9.5 9.5a2.5 2.5 0 1 1 3.8 2.1c-.8.5-1.3 1-1.3 2"/>
+              <circle cx="12" cy="16.5" r=".8" fill="currentColor"/>
+            </svg>
+          </button>
+          <button class="side-btn" type="button" aria-label="Logout" title="Logout">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M10 5H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3"/>
+              <path d="M14 12H6M15 8l4 4-4 4"/>
+            </svg>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <div class="page-header page-header--perks">
+          <div>
+            <h1>Perks and Benefits</h1>
+          </div>
+        </div>
+
+        <section class="card perks-hero">
+          <div class="perks-hero-copy">
+            <span class="perks-hero-tag">$10K+ in AI model credits</span>
+            <h2>Anthropic tokens</h2>
+            <p>AI model credits for your business</p>
+          </div>
+          <img class="perks-hero-mark" src="assets/logos/anthropic-hero.png" alt="" />
+        </section>
+
+        <div class="perks-toolbar">
+          <label class="search perks-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="11" cy="11" r="6.5"/>
+              <path d="M16 16l4.5 4.5"/>
+            </svg>
+            <input type="search" id="perksSearch" placeholder="Name of the service" />
+          </label>
+
+          <div class="perks-filters" role="tablist" aria-label="Categories">
+            <button class="perk-filter is-active" type="button" data-filter="all">All</button>
+            <button class="perk-filter" type="button" data-filter="top">Top choice</button>
+            <button class="perk-filter" type="button" data-filter="ai">AI &amp; Automation</button>
+            <button class="perk-filter" type="button" data-filter="finance">Finance &amp; Accounting</button>
+            <button class="perk-filter" type="button" data-filter="communication">Communication</button>
+            <button class="perk-filter" type="button" data-filter="crm">CRM &amp; Sales</button>
+            <button class="perk-filter" type="button" data-filter="ops">Operations &amp; Logistics</button>
+            <button class="perk-filter" type="button" data-filter="cloud">Cloud &amp; Infrastructure</button>
+            <button class="perk-filter" type="button" data-filter="hr">HR &amp; Hiring</button>
+            <button class="perk-filter" type="button" data-filter="analytics">Analytics</button>
+            <button class="perk-filter" type="button" data-filter="productivity">Productivity &amp; Collaboration</button>
+            <button class="perk-filter" type="button" data-filter="design">Design &amp; Creative</button>
+            <button class="perk-filter" type="button" data-filter="learning">Learning &amp; Training</button>
+          </div>
+        </div>
+
+        <div class="perks-grid" id="perksGrid">
+          <a class="card perk-card" href="#anthropic" data-name="anthropic tokens" data-cats="top ai">
+            <span class="perk-top-deal">Top Deals</span>
+            <img class="perk-logo" src="assets/logos/anthropic.png" alt="" />
+            <h3>Anthropic tokens</h3>
+            <span class="perk-offer">$10K+ in AI model credits</span>
+            <p>AI model credits for your business</p>
+          </a>
+
+          <a class="card perk-card" href="#aws" data-name="aws" data-cats="top cloud">
+            <img class="perk-logo" src="assets/logos/aws.png" alt="" />
+            <h3>AWS</h3>
+            <span class="perk-offer">Up to $100,000 in credits</span>
+            <p>Leading cloud platform for business</p>
+          </a>
+
+          <a class="card perk-card" href="#zoom" data-name="zoom" data-cats="communication">
+            <img class="perk-logo" src="assets/logos/zoom.png" alt="" />
+            <h3>Zoom</h3>
+            <span class="perk-offer">Up to 25%</span>
+            <p>Platform for calls and team communication</p>
+          </a>
+
+          <a class="card perk-card" href="#microsoft" data-name="microsoft" data-cats="productivity">
+            <img class="perk-logo" src="assets/logos/microsoft.png" alt="" />
+            <h3>Microsoft</h3>
+            <span class="perk-offer">Up to 17%</span>
+            <p>Suite of office apps and cloud solutions</p>
+          </a>
+
+          <a class="card perk-card" href="#atlassian" data-name="atlassian" data-cats="productivity">
+            <img class="perk-logo" src="assets/logos/atlassian.png" alt="" />
+            <h3>Atlassian</h3>
+            <span class="perk-offer">Up to 5%</span>
+            <p>Tools for team collaboration and development</p>
+          </a>
+
+          <a class="card perk-card" href="#slack" data-name="slack" data-cats="communication">
+            <img class="perk-logo" src="assets/logos/slack.png" alt="" />
+            <h3>Slack</h3>
+            <span class="perk-offer">Up to 10%</span>
+            <p>Corporate chat for teamwork</p>
+          </a>
+
+          <a class="card perk-card" href="#hubspot" data-name="hubspot" data-cats="crm">
+            <img class="perk-logo" src="assets/logos/hubspot.png" alt="" />
+            <h3>Hubspot</h3>
+            <span class="perk-offer">Up to 90%</span>
+            <p>CRM for marketing, sales, and service</p>
+          </a>
+
+          <a class="card perk-card" href="#google" data-name="google workspace" data-cats="productivity">
+            <img class="perk-logo" src="assets/logos/google.png" alt="" />
+            <h3>Google workspace</h3>
+            <span class="perk-offer">Up to 20%</span>
+            <p>Google Workspace for teams</p>
+          </a>
+
+          <a class="card perk-card" href="#asana" data-name="asana" data-cats="productivity">
+            <img class="perk-logo" src="assets/logos/asana.png" alt="" />
+            <h3>Asana</h3>
+            <span class="perk-offer">Up to 10%</span>
+            <p>Project management platform</p>
+          </a>
+
+          <a class="card perk-card" href="#azure" data-name="azure" data-cats="cloud">
+            <img class="perk-logo" src="assets/logos/azure.png" alt="" />
+            <h3>Azure</h3>
+            <span class="perk-offer">Up to $5,000 in credits</span>
+            <p>Microsoft cloud for modern apps</p>
+          </a>
+
+          <a class="card perk-card" href="#gitlab" data-name="gitlab" data-cats="productivity">
+            <img class="perk-logo" src="assets/logos/gitlab.png" alt="" />
+            <h3>GitLab</h3>
+            <span class="perk-offer">Up to 20%</span>
+            <p>DevOps platform for code and CI/CD</p>
+          </a>
+
+          <a class="card perk-card" href="#clickup" data-name="clickup" data-cats="productivity">
+            <img class="perk-logo" src="assets/logos/clickup.png" alt="" />
+            <h3>ClickUp</h3>
+            <span class="perk-offer">Up to 30%</span>
+            <p>All-in-one productivity for teams</p>
+          </a>
+
+          <a class="card perk-card" href="#grammarly" data-name="grammarly" data-cats="ai learning">
+            <img class="perk-logo" src="assets/logos/grammarly.png" alt="" />
+            <h3>Grammarly</h3>
+            <span class="perk-offer">Up to 20%</span>
+            <p>AI writing assistant for clear communication</p>
+          </a>
+
+          <a class="card perk-card" href="#zendesk" data-name="zendesk" data-cats="crm">
+            <img class="perk-logo" src="assets/logos/zendesk.png" alt="" />
+            <h3>Zendesk</h3>
+            <span class="perk-offer">Up to 15%</span>
+            <p>Customer service and support platform</p>
+          </a>
+
+          <a class="card perk-card" href="#spend" data-name="spend" data-cats="finance">
+            <img class="perk-logo" src="assets/logos/spend.png" alt="" />
+            <h3>Spend</h3>
+            <span class="perk-offer">Up to 10%</span>
+            <p>Spend management for growing teams</p>
+          </a>
+        </div>
+
+        <p class="perks-empty" id="perksEmpty" hidden>No services match your search.</p>
+      </main>
+    </div>
+  </div>
+
+  <script src="perks.js"></script>
+</body>
+</html>
