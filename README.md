@@ -9,6 +9,7 @@ Financial dashboard UI inspired by the Garna soft-UI concept: lime accent, bento
 - `company.html` — contractors & positions directory
 - `perks.html` — perks and benefits (partner offers, 4-column cards)
 - `notifications.html` — notifications inbox
+- `eor.html` — EOR employees (map, hiring actions)
 
 ## Run
 

@@ -1,0 +1,321 @@
+/* EOR Employees */
+
+.eor-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.eor-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease;
+}
+
+.eor-action:hover {
+  transform: translateY(-3px);
+}
+
+.eor-action-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+}
+
+.eor-action-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.eor-action-icon--calc {
+  background: #efe8ff;
+  color: #6b4bc4;
+}
+
+.eor-action-icon--plus {
+  background: var(--lime-soft);
+  color: #3d5a10;
+}
+
+.eor-action-icon--billing {
+  background: #e8f0ff;
+  color: #1f4db8;
+}
+
+.eor-action h2 {
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.eor-action p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.eor-map-card {
+  padding: 22px;
+  margin-bottom: 14px;
+}
+
+.eor-map-head {
+  margin-bottom: 16px;
+}
+
+.eor-map-head h2 {
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.eor-map-head p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.eor-map-stage {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--surface);
+  min-height: 360px;
+  border: 1px solid var(--line);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.eor-map-stage.is-panning {
+  cursor: grabbing;
+}
+
+.eor-map-stage.is-panning .eor-country,
+.eor-map-stage.is-panning .eor-country path {
+  pointer-events: none;
+}
+
+.eor-map-viewport {
+  width: 100%;
+  height: 420px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.eor-map {
+  width: 100%;
+  height: 100%;
+  display: block;
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+}
+
+.eor-map-error {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.eor-country,
+.eor-country path {
+  fill: #dde0d8;
+  stroke: none;
+  transition: fill 0.15s ease;
+  cursor: pointer;
+}
+
+.eor-country.is-available,
+.eor-country.is-available path {
+  fill: var(--lime-soft);
+}
+
+.eor-country.is-available:hover,
+.eor-country.is-available.is-active,
+.eor-country.is-available:hover path,
+.eor-country.is-available.is-active path {
+  fill: var(--lime);
+}
+
+.eor-country:not(.is-available):hover,
+.eor-country:not(.is-available).is-active,
+.eor-country:not(.is-available):hover path,
+.eor-country:not(.is-available).is-active path {
+  fill: var(--muted);
+}
+
+.eor-map-tooltip {
+  position: absolute;
+  z-index: 3;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #151515;
+  color: #fff;
+  font-size: 0.84rem;
+  font-weight: 600;
+  pointer-events: none;
+  white-space: nowrap;
+  transform: translate(-50%, -120%);
+}
+
+.eor-map-tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #151515;
+}
+
+.eor-map-zoom {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.eor-map-zoom button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.eor-map-zoom button:hover {
+  background: #f3f5f0;
+}
+
+.eor-country-panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #f7f8f5;
+}
+
+.eor-country-panel[hidden] {
+  display: none;
+}
+
+.eor-country-panel strong {
+  font-size: 1rem;
+}
+
+.eor-country-status {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.eor-country-status.is-yes {
+  background: var(--lime-soft);
+  color: #3d5a10;
+}
+
+.eor-country-status.is-no {
+  background: rgba(239, 91, 91, 0.12);
+  color: var(--down);
+}
+
+.eor-country-panel p {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.eor-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 24px;
+  padding: 22px;
+}
+
+.eor-benefit {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.eor-benefit-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+}
+
+.eor-benefit-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.eor-benefit-icon--a {
+  background: #e8f0ff;
+  color: #1f4db8;
+}
+
+.eor-benefit-icon--b {
+  background: #efe8ff;
+  color: #6b4bc4;
+}
+
+.eor-benefit-icon--c {
+  background: #efe8ff;
+  color: #6b4bc4;
+}
+
+.eor-benefit-icon--d {
+  background: #e8f0ff;
+  color: #1f4db8;
+}
+
+.eor-benefit h3 {
+  font-size: 0.98rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.eor-benefit p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .eor-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .eor-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .eor-map-viewport {
+    height: 280px;
+  }
+}
