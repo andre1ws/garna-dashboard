@@ -180,6 +180,10 @@
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
+.history-item[hidden] {
+  display: none !important;
+}
+
 .history-item:hover {
   background: #f0f2ec;
   transform: translateY(-1px);
@@ -196,8 +200,9 @@
 }
 
 .history-icon svg {
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
+  overflow: visible;
 }
 
 .history-icon--refund {
