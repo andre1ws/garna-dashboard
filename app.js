@@ -49,7 +49,7 @@ function drawChart() {
   const max = Math.max(...values) * 1.15;
   const gap = 10;
   const barW = (width - padX * 2 - gap * (values.length - 1)) / values.length;
-  const lime = cssToken("--lime", "#cbf300");
+  const lime = cssToken("--lime", "#B8FF3C");
   const limeDeep = cssToken("--lime-deep", "#9ae62a");
 
   ctx.clearRect(0, 0, width, height);
