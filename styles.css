@@ -4,9 +4,20 @@
   --ink: #151515;
   --muted: #8a8f98;
   --line: #eceeea;
-  --lime: #b8ff3c;
+  /* Primary + derivatives */
+  --lime: #cbf300;
+  --lime-rgb: 203, 243, 0;
   --lime-deep: #9ae62a;
+  --lime-mid: #d8f5a2;
   --lime-soft: #eafcc0;
+  --lime-wash: #f7ffe8;
+  --lime-ink: #3d5a10;
+  --lime-ink-strong: #2a321c;
+  --lime-dark: #222820;
+  --lime-glow: rgba(var(--lime-rgb), 0.35);
+  --lime-glow-strong: rgba(var(--lime-rgb), 0.45);
+  --lime-gradient: linear-gradient(135deg, var(--lime-mid) 0%, var(--lime) 45%, var(--lime-deep) 100%);
+  --lime-gradient-soft: linear-gradient(145deg, var(--lime-mid), var(--lime));
   --up: #2fbf6b;
   --down: #ef5b5b;
   --shadow: 0 10px 30px rgba(20, 24, 18, 0.05);
@@ -30,7 +41,7 @@ body {
   font-family: var(--font);
   color: var(--ink);
   background:
-    radial-gradient(1200px 600px at 10% -10%, #f7ffe8 0%, transparent 55%),
+    radial-gradient(1200px 600px at 10% -10%, var(--lime-wash) 0%, transparent 55%),
     radial-gradient(900px 500px at 100% 0%, #eef7ff 0%, transparent 45%),
     var(--bg);
   -webkit-font-smoothing: antialiased;
@@ -232,7 +243,7 @@ p {
 .side-btn.is-active {
   background: var(--lime);
   color: #111;
-  box-shadow: 0 6px 16px rgba(184, 255, 60, 0.45);
+  box-shadow: 0 6px 16px var(--lime-glow-strong);
 }
 
 /* Main */
@@ -484,7 +495,7 @@ a.btn {
 }
 
 .stat-link:hover {
-  color: #3d5a10;
+  color: var(--lime-ink);
 }
 
 .trend {
@@ -715,8 +726,8 @@ a.btn {
 
 .btn-lime {
   background: var(--lime);
-  color: #151515;
-  box-shadow: 0 8px 20px rgba(184, 255, 60, 0.35);
+  color: var(--ink);
+  box-shadow: 0 8px 20px var(--lime-glow);
 }
 
 .btn-lime:hover {

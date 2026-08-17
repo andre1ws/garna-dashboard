@@ -33,6 +33,11 @@ function resizeCanvas() {
   drawChart();
 }
 
+function cssToken(name, fallback) {
+  const value = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  return value || fallback;
+}
+
 function drawChart() {
   const values = datasets[activeTab];
   const width = canvas.clientWidth;
@@ -44,6 +49,8 @@ function drawChart() {
   const max = Math.max(...values) * 1.15;
   const gap = 10;
   const barW = (width - padX * 2 - gap * (values.length - 1)) / values.length;
+  const lime = cssToken("--lime", "#cbf300");
+  const limeDeep = cssToken("--lime-deep", "#9ae62a");
 
   ctx.clearRect(0, 0, width, height);
   barRects = [];
@@ -58,8 +65,8 @@ function drawChart() {
     roundRect(ctx, x, y, barW, h, r);
     if (i === activeIndex) {
       const grad = ctx.createLinearGradient(x, y, x, y + h);
-      grad.addColorStop(0, "#c8ff5a");
-      grad.addColorStop(1, "#9ae62a");
+      grad.addColorStop(0, lime);
+      grad.addColorStop(1, limeDeep);
       ctx.fillStyle = grad;
     } else {
       ctx.fillStyle = "#eceee9";

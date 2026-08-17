@@ -42,7 +42,7 @@
 
 .eor-action-icon--plus {
   background: var(--lime-soft);
-  color: #3d5a10;
+  color: var(--lime-ink);
 }
 
 .eor-action-icon--billing {
@@ -231,7 +231,7 @@
 
 .eor-country-status.is-yes {
   background: var(--lime-soft);
-  color: #3d5a10;
+  color: var(--lime-ink);
 }
 
 .eor-country-status.is-no {

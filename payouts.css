@@ -51,7 +51,7 @@
   padding: 3px 8px;
   border-radius: var(--radius-pill);
   background: var(--lime-soft);
-  color: #3d5a10;
+  color: var(--lime-ink);
   font-size: 0.72rem;
   font-weight: 700;
 }
@@ -211,8 +211,8 @@
 }
 
 .history-icon--bank {
-  background: #eef6d8;
-  color: #3d5a10;
+  background: var(--lime-soft);
+  color: var(--lime-ink);
 }
 
 .history-icon--paypal {
@@ -222,7 +222,7 @@
 
 .history-icon--team {
   background: var(--lime-soft);
-  color: #2a321c;
+  color: var(--lime-ink-strong);
 }
 
 .history-meta {
@@ -294,8 +294,8 @@
 
 .feature-banner--dark {
   background:
-    radial-gradient(circle at 85% 20%, rgba(184, 255, 60, 0.18), transparent 40%),
-    linear-gradient(135deg, #171717 0%, #222820 100%);
+    radial-gradient(circle at 85% 20%, rgba(var(--lime-rgb), 0.18), transparent 40%),
+    linear-gradient(135deg, #171717 0%, var(--lime-dark) 100%);
   color: #fff;
 }
 
@@ -406,14 +406,14 @@
 
 .template-icon--new {
   background: var(--lime);
-  color: #151515;
+  color: var(--ink);
   font-size: 1.3rem;
   font-weight: 500;
 }
 
 .template-icon--bank {
-  background: #eef6d8;
-  color: #3d5a10;
+  background: var(--lime-soft);
+  color: var(--lime-ink);
 }
 
 .template-icon--paypal {
@@ -456,8 +456,8 @@
 }
 
 .mini-offer--lime {
-  background: linear-gradient(135deg, #c8ff5a 0%, #a8ef2e 55%, #95df22 100%);
-  color: #151515;
+  background: var(--lime-gradient);
+  color: var(--ink);
 }
 
 .mini-offer h3 {
@@ -501,8 +501,8 @@
   width: 40px;
   height: 40px;
   border-radius: 14px;
-  background: linear-gradient(145deg, #d8f5a2, #b8ff3c);
-  color: #1a1a1a;
+  background: var(--lime-gradient-soft);
+  color: var(--ink);
   display: grid;
   place-items: center;
   flex-shrink: 0;

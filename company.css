@@ -36,8 +36,8 @@
 
 .invite-card--dark {
   background:
-    radial-gradient(circle at 90% 10%, rgba(184, 255, 60, 0.22), transparent 40%),
-    linear-gradient(145deg, #171717 0%, #222820 100%);
+    radial-gradient(circle at 90% 10%, rgba(var(--lime-rgb), 0.22), transparent 40%),
+    linear-gradient(145deg, #171717 0%, var(--lime-dark) 100%);
   color: #fff;
 }
 
@@ -74,12 +74,12 @@
 
 .invite-icon--mail {
   background: var(--lime);
-  color: #151515;
+  color: var(--ink);
 }
 
 .invite-icon--csv {
-  background: #dff7a8;
-  color: #2a321c;
+  background: var(--lime-mid);
+  color: var(--lime-ink-strong);
 }
 
 .company-row .stat-card {
@@ -148,8 +148,8 @@
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: #eef6d8;
-  color: #3d5a10;
+  background: var(--lime-soft);
+  color: var(--lime-ink);
   font-size: 0.78rem;
   font-weight: 800;
   flex-shrink: 0;

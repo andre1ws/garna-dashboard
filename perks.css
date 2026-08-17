@@ -13,8 +13,8 @@
   margin-bottom: 18px;
   min-height: 148px;
   background:
-    radial-gradient(circle at 88% 20%, rgba(184, 255, 60, 0.28), transparent 42%),
-    linear-gradient(145deg, #171717 0%, #222820 100%);
+    radial-gradient(circle at 88% 20%, rgba(var(--lime-rgb), 0.28), transparent 42%),
+    linear-gradient(145deg, #171717 0%, var(--lime-dark) 100%);
   color: #fff;
   overflow: hidden;
 }
@@ -126,7 +126,7 @@
   padding: 4px 10px;
   border-radius: var(--radius-pill);
   background: var(--lime-soft);
-  color: #3d5a10;
+  color: var(--lime-ink);
   font-size: 0.7rem;
   font-weight: 700;
 }
@@ -157,7 +157,7 @@
   padding: 5px 12px;
   border-radius: var(--radius-pill);
   background: var(--lime-soft);
-  color: #3d5a10;
+  color: var(--lime-ink);
   font-size: 0.78rem;
   font-weight: 700;
 }

@@ -44,7 +44,7 @@
   padding: 1px 7px;
   border-radius: var(--radius-pill);
   background: var(--lime-soft);
-  color: #3d5a10;
+  color: var(--lime-ink);
   font-size: 0.78rem;
   font-weight: 700;
 }
@@ -108,7 +108,7 @@
 
 .notif-card[data-state="read"] .notif-mark {
   background: var(--lime);
-  color: #151515;
+  color: var(--ink);
 }
 
 .notif-icon {
@@ -118,7 +118,7 @@
   display: grid;
   place-items: center;
   background: var(--lime-soft);
-  color: #3d5a10;
+  color: var(--lime-ink);
   flex-shrink: 0;
 }
 
@@ -167,7 +167,7 @@
 }
 
 .notif-body a {
-  color: #3d5a10;
+  color: var(--lime-ink);
   font-weight: 600;
   text-decoration: none;
 }
